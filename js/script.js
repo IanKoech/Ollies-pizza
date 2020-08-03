@@ -1,47 +1,63 @@
+var size;
+var crust;
+var totalPrice;
+
+var delivery;
+var deliveryLocation;
+var number=parseInt(document.getElementById().value);
 /*Js constructor for creating numerous instances*/
-var Pizza=function(size){
+var Pizza=function(size,crust,delivery,number){
     this.size=size;
+    this.crust=crust;
+    this.delivery=delivery;
+    this.number=number;
 };
-var totalPrice=0;
-var deliveryCharge=0;
-var number=parseFloat(document.getElementById("number"));
-/*Front-end logic*/
-$(document).ready(function(){
-    
-    
-    $("#button").click(function(){
-        
-        var size=parseFloat(document.getElementsById('size').value);
-        alert(size);
-        if(size=="small"){
-            totalPrice+=300;
-        }else if(size=="medium"){
-            totalPrice+=900;
-        }else{
-            totalPrice+=1200;
-        }
-        totalPrice=totalPrice*number;
+Pizza.prototype.makeOrder=function(){
+    return(this.number+" "+this.size+" pizzas are ordered and will be delivered to "+this.deliveryLocation+" at a total cost of "+this.totalPrice);
+}
+
+function checkSize(size){
+    if(size=="small"){
+        totalPrice+=300;
+    }else if(size=="medium"){
+        totalPrice+=600;
+    }else{
+        totalPrice+=1200;
+    }
+    alert(totalPrice);
+    return totalPrice;
+}
+function checkNumber(number){
+    return totalPrice*number;
+}
+function checkDelivery(){
+    if(delivery=="Yes"){
+        totalPrice+=200;
         alert(totalPrice);
-        var delivery=document.getElementById("delivery").value;
-        alert(delivery);
-        var location;
-        if(delivery=="Yes"){
-            deliveryCharge+=200;
-            location=prompt("Enter your delivery location:");
-            alert(location);
-        }else{
-            deliveryCharge+=0;
-        }
-        alert(deliveryCharge);
-        alert("Your delivery will be made to "+location+" at a cost of Ksh:"+deliveryCharge)
-    });
-    $("#button").submit(function(event){
-        var pizzaCrust=document.getElementById("crust").value;
-        var pizzaToppings=document.getElementById("toppings").value;
-        totalPrice+=deliveryCharge;
-        document.getElementById("display-text").innerHTML=totalPrice;
-        document.getElementById("num").innerHTML=number;
-        event.preventDefault();
-    });
-    
+        location=prompt("Please enter the location to be delivered:");   
+    }else{
+        totalPrice+=0;
+    }
+}
+function checkOut(){
+    return totalPrice;
+}
+$(document).ready(function(){
+   $("#Yes").click(function(){
+       delivery=document.getElementById("Yes").value;
+   });
+   $("#No").click(function(){
+       delivery=document.getElementById("No").value;
+   });
+   $("button#button").submit(function(event){
+       event.preventDefault();
+       var myNumber=parseInt(document.getElementById("#number"));
+       var crust=$("#crust").val();
+       var size=$("#size").val();
+        var customer=new Pizza(size,crust,delivery,number);
+        checkSize(size);
+        checkNumber(myNumber);
+        checkOut();
+        $(".output#text").text(customer.makeOrder());
+   });
 });
