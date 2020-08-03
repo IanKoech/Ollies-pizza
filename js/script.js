@@ -51,15 +51,17 @@ $(document).ready(function(){
    $("#No").click(function(){
        delivery=document.getElementById("No").value;
    });
-   $("button#button").submit(function(event){
-       event.preventDefault();
-       var customer=new Pizza(size,crust,delivery,number);
-       checkSize(size);
-       checkNumber(myNumber);
-       checkDelivery();
-       checkOut();
-       customer.makeOrder();
-       document.getElementById("#num").innerHTML=number;
-       document.getElementById("#display-text").innerHTML=totalPrice;
+   $("#button").click(function(){
+    $("button#button").submit(function(event){
+        event.preventDefault();
+        var customer=new Pizza(size,crust,delivery,number);
+        checkSize(size);
+        checkNumber(myNumber);
+        checkDelivery();
+        checkOut();
+        customer.makeOrder();
+        document.getElementById("#num").innerHTML=number;
+        document.getElementById("#display-text").innerHTML=totalPrice;
+    });
    });
 });
