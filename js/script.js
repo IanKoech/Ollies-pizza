@@ -3,7 +3,7 @@ var crust;
 var totalPrice;
 
 var delivery;
-var deliveryLocation;
+var location;
 var number=parseInt(document.getElementById().value);
 /*Js constructor for creating numerous instances*/
 var Pizza=function(size,crust,delivery,number){
@@ -39,9 +39,11 @@ function checkDelivery(){
         totalPrice+=0;
     }
 }
+
 function checkOut(){
     return totalPrice;
 }
+/*Front end logic */
 $(document).ready(function(){
    $("#Yes").click(function(){
        delivery=document.getElementById("Yes").value;
@@ -51,13 +53,13 @@ $(document).ready(function(){
    });
    $("button#button").submit(function(event){
        event.preventDefault();
-       var myNumber=parseInt(document.getElementById("#number"));
-       var crust=$("#crust").val();
-       var size=$("#size").val();
-        var customer=new Pizza(size,crust,delivery,number);
-        checkSize(size);
-        checkNumber(myNumber);
-        checkOut();
-        $(".output#text").text(customer.makeOrder());
+       var customer=new Pizza(size,crust,delivery,number);
+       checkSize(size);
+       checkNumber(myNumber);
+       checkDelivery();
+       checkOut();
+       customer.makeOrder();
+       document.getElementById("#num").innerHTML=number;
+       document.getElementById("#display-text").innerHTML=totalPrice;
    });
 });
