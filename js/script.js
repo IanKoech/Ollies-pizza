@@ -8,7 +8,7 @@ $(document).ready(function(){
     var totalPrice=0;
     var number=parseInt(document.getElementById("number").value);
     $("#button").click(function(){
-        var size=new Pizza(document.getElementById("size").value);
+        var size=parseInt(document.getElementsById("size").value);
         alert(size);
         if(size=="small"){
             totalPrice+=300;
@@ -32,7 +32,7 @@ $(document).ready(function(){
         alert(deliveryCharge);
         alert("Your delivery will be made to "+location+" at a cost of Ksh:"+deliveryCharge)
     });
-    $("form").submit(function(){
+    $("#button").submit(function(){
         var pizzaCrust=document.getElementById("crust").value;
         var pizzaToppings=document.getElementById("toppings").value;
         totalPrice+=deliveryCharge;
