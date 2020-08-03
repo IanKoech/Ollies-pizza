@@ -4,7 +4,7 @@ var totalPrice;
 
 var delivery;
 var location;
-var number=parseInt(document.getElementById("#number").value);
+var number=parseInt(document.getElementById("#number"));
 /*Js constructor for creating numerous instances*/
 var Pizza=function(size,crust,delivery,number){
     this.size=size;
