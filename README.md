@@ -6,8 +6,11 @@ Ian Koech can be reached at iankoech9@gmail.com
 
 #### Set-up instructions
 User enters the desired pizza size
+
 User selects the preferred toppings they would want
+
 Dependent on whether they  will be delivered or picked up by the user, enter the location of delivery
+
 Click on the place order button and check the total price.
 
 #### Description

@@ -38,7 +38,7 @@ $(document).ready(function(){
     });
     $("#button").submit(function(){
         event.preventDefault();
-        $("#text").append("You have ordered "+number+" "+pizzaSize+" of crust type "+crust+ "at Ksh"+totalPrice);
+        document.getElementById("text").innerHTML=("You have ordered "+number+" "+pizzaSize+" of crust type "+crust+ "at Ksh"+totalPrice);
     });
 });
 
