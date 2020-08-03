@@ -6,12 +6,13 @@ var Pizza=function(size){
 
 $(document).ready(function(){
     var deliveryCharge=0;
+    var pizzaSize;
     var totalPrice=0;
     var toppings=[];
     var number=parseInt(document.getElementById("number").value());
     var crust=document.getElementById("crust").value();
     $("#sizeSelected").click(function(){
-        var pizzaSize=new Pizza(document.getElementsByClassName("sizeSelected").value());
+        pizzaSize=new Pizza(document.getElementsByClassName("sizeSelected").value());
         if(pizzaSize=="small"){
             totalPrice+=300;
         }else if(pizzaSize=="medium"){
@@ -35,4 +36,10 @@ $(document).ready(function(){
     $(".toppings").click(function(){
         toppings.push(document.getElementsByName("toppings").value());
     });
+    $("#button").submit(function(){
+        event.preventDefault();
+        $("#text").append("You have ordered "+number+" "+pizzaSize+" of crust type "+crust+ "at Ksh"+totalPrice);
+    });
 });
+
+    

@@ -1,12 +1,20 @@
+html{
+    scroll-behavior: smooth;
+    background-image: url(https://images.unsplash.com/photo-1544982503-9f984c14501a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+}
 body{
     text-align: center;
+    
+    background-repeat: no-repeat;
+
 }
 p{
     font-family: "Poppins";
     font-size: large;
 }
 #jumbo{
-    background-color: crimson;
+    background-color: tomato;
 }
 label{
     font-family: "Montserrat";
