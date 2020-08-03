@@ -19,71 +19,60 @@
         </div>
         <img src="logo.png" height="150px" width=auto>
         <form>
-            <div>
+            <div id="sizeSelected">
                 <p>Select the size to order:</p>
-                <input id="large" type="radio" name="size" value="large">
-                <label for="large">Large</label>
-                <br>
-                <input id="medium" type="radio" name="size" value="small">
-                <label for="medium">Medium</label>
-                <br>
-                <input id="small" type="radio" name="size" value="small">
-                <label for="small">Small</label>
+                <select id="size">
+                    <option class="small">Small</option>
+                    <option class="medium">Medium</option>
+                    <option class="large">Large</option>
+                </select>
             </div>
             <br>
             <div>
                 <p>Select the crust type:</p>
-                <input id="crispy" type="radio" name="crust" value="crispy">
-                <label for="crispy">Crispy</label>
-                <br>
-                <input id="stuffed" type="radio" name="crust" value="stuffed">
-                <label for="stuffed">Stuffed</label>
-                <br>
-                <input id="glutten" type="radio" name="crust" value="glutten-free">
-                <label for="glutten">Glutten-free</label>
+                <select id="crust">
+                    <option value="crusty">Crusty</option>
+                    <option value="stuffed">Stuffed</option>
+                    <option value="glutten-free">Glutten-free</option>
+                </select>
             </div>
             <br>
-            <div>
+            <div class="toppings">
                 <p>Select the toppings:</p>
-                <input type="checkbox" name="toppings" value="">
+                <input type="checkbox" name="toppings" value="Peperoni">
                 <label>Peperoni</label>
                 <br>
-                <input type="checkbox" name="toppings" value="">
+                <input type="checkbox" name="toppings" value="Mushrooms">
                 <label>Mushrooms</label>
                 <br>
-                <input type="checkbox" name="toppings" value="">
-                <label>Mushrooms</label>
-                <br>
-                <input type="checkbox" name="toppings" value="">
+                
+                <input type="checkbox" name="toppings" value="Onions">
                 <label>Onions</label>
                 <br>
-                <input type="checkbox" name="toppings" value="">
+                <input type="checkbox" name="toppings" value="Sausage">
                 <label>Sausage</label>
                 <br>
-                <input type="checkbox" name="toppings" value="">
+                <input type="checkbox" name="toppings" value="Bacon">
                 <label>Bacon</label>
                 <br>
-                <input type="checkbox" name="toppings" value="">
+                <input type="checkbox" name="toppings" value="cheese">
                 <label>Extra cheese</label>
                 <br>
             </div>
             
             <div>
                 <p>Enter the number of pizza you want to order:</p>
-                <input type="number" value="number" min="1" max="10">
+                <input id="number" type="number" value="number" min="1" max="10">
             </div>
             <br>
-            <div>
+            <div class="deliveryD">
                 <p>Do you want it to be delivered:</p>
-                <input id="yes" type="radio" name="delivered" value="Yes">
+                <input class="delivery" id="delivery" type="radio" name="delivered" value="Yes">
                 <label for="yes">Yes</label>
-                <input id="no" type="radio" name="delivered" value="No">
+                <input class="delivery" id="delivery" type="radio" name="delivered" value="No">
                 <label for="no">No</label>
             </div>
-            <div>
-                <span>Please enter the location of delivery:</span>
-                <input type="text" name="location">
-            </div>
+            
             <br>
             <!--Code below shows user how much they will be charged for delivery-->
             <div>
@@ -92,10 +81,10 @@
             <br>
             <!--Code below outputs price to user-->
             <div>
-                <span></span>
+                <span id="text"></span>
             </div>
             <br>
-            <button class="btn btn-primary">Place order</button>
+            <button  class="btn btn-primary">Place order</button>
         </form>
     </body>
 
