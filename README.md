@@ -37,7 +37,7 @@ Boostrap
 Google fonts
 
 #### Link to live site
-(https://iankoech.github.io/Ollies-pizza/)[Ollies Pizza]
+('https://iankoech.github.io/Ollies-pizza/')[Ollies Pizza]
 
 #### Licence
 MIT Licence
