@@ -1,7 +1,7 @@
 var size;
 var crust;
 var totalPrice;
-
+var toppings;
 var delivery;
 var location;
 var number=parseInt(document.getElementById("#number"));
@@ -46,25 +46,24 @@ function checkOut(){
 /*Front end logic */
 $(document).ready(function(){
    $("#Yes").click(function(){
-       delivery=document.getElementById("Yes").value;
+       delivery=document.getElementById("Yes").val();
    });
    $("#No").click(function(){
-       delivery=document.getElementById("No").value;
+       delivery=document.getElementById("No").val();
    });
-   $("#button").click(function(event){
-       event.preventDefault();
-       $("form#form1").submit(function(event){
-       event.preventDefault();
-       checkSize(size);
-       checkNumber(myNumber);
-       checkDelivery();
-       checkOut();
-       var customer=new Pizza(size,crust,delivery,number);
-        
-        customer.makeOrder();
+   $("#toppings").click(function(){
+       toppings=document.getElementById("toppings").value;
+   });
+   $("form#form1").submit(function(event){
+        event.preventDefault();
+        checkSize(size);
+        checkNumber(myNumber);
+        checkDelivery();
+        checkOut();
+        var customer=new Pizza(size,crust,delivery,number);        
+        makeOrder();
         document.getElementById("#num").innerHTML=number;
         document.getElementById("#display-text").innerHTML=totalPrice;
-    });
    });
 });
 
