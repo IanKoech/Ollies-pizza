@@ -10,6 +10,14 @@ $(document).ready(function(){
     
     
     $("#button").click(function(){
+        $("#button").submit(function(){
+            var pizzaCrust=document.getElementById("crust").value;
+            var pizzaToppings=document.getElementById("toppings").value;
+            totalPrice+=deliveryCharge;
+            document.getElementById("display-text").innerHTML=totalPrice;
+            document.getElementById("num").innerHTML=number;
+            event.preventDefault();
+        });
         var size=parseFloat(document.getElementsById('size').value);
         alert(size);
         if(size=="small"){
@@ -34,12 +42,5 @@ $(document).ready(function(){
         alert(deliveryCharge);
         alert("Your delivery will be made to "+location+" at a cost of Ksh:"+deliveryCharge)
     });
-    $("#button").submit(function(){
-        var pizzaCrust=document.getElementById("crust").value;
-        var pizzaToppings=document.getElementById("toppings").value;
-        totalPrice+=deliveryCharge;
-        document.getElementById("display-text").innerHTML=totalPrice;
-        document.getElementById("num").innerHTML=number;
-        event.preventDefault();
-    });
+    
 });
