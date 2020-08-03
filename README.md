@@ -16,11 +16,20 @@ This is because technologies that allow location detection have not been used.
 
 #### Technologies Used
 Javascript
+
 JQuery
+
 HTML
+
 CSS
+
 Boostrap
+
 Google fonts
 
 #### Link to live site
 (Ollies Pizza)[https://iankoech.github.io/Ollies-pizza/]
+
+#### Licence
+MIT Licence
+@Copyright IanKoech.
