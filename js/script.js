@@ -2,13 +2,15 @@
 var Pizza=function(size){
     this.size=size;
 };
+var totalPrice=0;
+var deliveryCharge=0;
+var number=parseFloat(document.getElementById("number"));
 /*Front-end logic*/
 $(document).ready(function(){
-    var deliveryCharge=0;
-    var totalPrice=0;
-    var number=parseInt(document.getElementById("number").value);
+    
+    
     $("#button").click(function(){
-        var size=parseInt(document.getElementsById("size").value);
+        var size=parseFloat(document.getElementsById('size').value);
         alert(size);
         if(size=="small"){
             totalPrice+=300;
