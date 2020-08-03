@@ -53,7 +53,8 @@ $(document).ready(function(){
    });
    $("#button").click(function(event){
        event.preventDefault();
-       $("button#button").submit(function(event){
+       $("form#form1").submit(function(event){
+       event.preventDefault();
        checkSize(size);
        checkNumber(myNumber);
        checkDelivery();
