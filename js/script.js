@@ -4,7 +4,7 @@ var totalPrice;
 
 var delivery;
 var location;
-var number=parseInt(document.getElementById().value);
+var number=parseInt(document.getElementById("#number").value);
 /*Js constructor for creating numerous instances*/
 var Pizza=function(size,crust,delivery,number){
     this.size=size;
@@ -51,14 +51,15 @@ $(document).ready(function(){
    $("#No").click(function(){
        delivery=document.getElementById("No").value;
    });
-   $("#button").click(function(){
-    $("button#button").submit(function(event){
-        event.preventDefault();
-        var customer=new Pizza(size,crust,delivery,number);
-        checkSize(size);
-        checkNumber(myNumber);
-        checkDelivery();
-        checkOut();
+   $("#button").click(function(event){
+       event.preventDefault();
+       $("button#button").submit(function(event){
+       checkSize(size);
+       checkNumber(myNumber);
+       checkDelivery();
+       checkOut();
+       var customer=new Pizza(size,crust,delivery,number);
+        
         customer.makeOrder();
         document.getElementById("#num").innerHTML=number;
         document.getElementById("#display-text").innerHTML=totalPrice;
