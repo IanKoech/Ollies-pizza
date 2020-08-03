@@ -1,4 +1,13 @@
+body{
+    text-align: center;
+}
 p{
     font-family: "Poppins";
     font-size: large;
+}
+#jumbo{
+    background-color: crimson;
+}
+label{
+    font-family: "Montserrat";
 }

@@ -3,23 +3,99 @@
     <head>
         <meta charset="utf-8">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins"/>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat"/>
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-3.5.1.js"></script>
         <script src="js/script.js"></script>
     </head>
 
     <body>
-        <div class="jumbotron">
-            <img src="logo.png">
+        <div class="jumbotron" id="jumbo">
+            <p>Welcome to ollies pizza, inline with social distancing , you can now place an order 
+                from the comfort of your phone or laptop device.<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/241/grinning-face-with-big-eyes_1f603.png" height="25px" width=auto>
+            </p>
+            
         </div>
+        <img src="logo.png" height="150px" width=auto>
         <form>
             <div>
-                <label>Select the size to order:</label>
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
+                <p>Select the size to order:</p>
+                <input id="large" type="radio" name="size" value="large">
+                <label for="large">Large</label>
+                <br>
+                <input id="medium" type="radio" name="size" value="small">
+                <label for="medium">Medium</label>
+                <br>
+                <input id="small" type="radio" name="size" value="small">
+                <label for="small">Small</label>
             </div>
+            <br>
+            <div>
+                <p>Select the crust type:</p>
+                <input id="crispy" type="radio" name="crust" value="crispy">
+                <label for="crispy">Crispy</label>
+                <br>
+                <input id="stuffed" type="radio" name="crust" value="stuffed">
+                <label for="stuffed">Stuffed</label>
+                <br>
+                <input id="glutten" type="radio" name="crust" value="glutten-free">
+                <label for="glutten">Glutten-free</label>
+            </div>
+            <br>
+            <div>
+                <p>Select the toppings:</p>
+                <input type="checkbox" name="toppings" value="">
+                <label>Peperoni</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Mushrooms</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Mushrooms</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Onions</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Sausage</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Bacon</label>
+                <br>
+                <input type="checkbox" name="toppings" value="">
+                <label>Extra cheese</label>
+                <br>
+            </div>
+            
+            <div>
+                <p>Enter the number of pizza you want to order:</p>
+                <input type="number" value="number" min="1" max="10">
+            </div>
+            <br>
+            <div>
+                <p>Do you want it to be delivered:</p>
+                <input id="yes" type="radio" name="delivered" value="Yes">
+                <label for="yes">Yes</label>
+                <input id="no" type="radio" name="delivered" value="No">
+                <label for="no">No</label>
+            </div>
+            <div>
+                <span>Please enter the location of delivery:</span>
+                <input type="text" name="location">
+            </div>
+            <br>
+            <!--Code below shows user how much they will be charged for delivery-->
+            <div>
+                <span></span>
+            </div>
+            <br>
+            <!--Code below outputs price to user-->
+            <div>
+                <span></span>
+            </div>
+            <br>
+            <button class="btn btn-primary">Place order</button>
         </form>
     </body>
 
