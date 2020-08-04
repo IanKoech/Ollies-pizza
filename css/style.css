@@ -11,6 +11,9 @@ form{
     text-align: center;
     
 }
+#logo{
+    padding-left: 30px;
+}
 p{
     font-family: "Poppins";
     font-size: large;
