@@ -217,7 +217,7 @@ $(document).ready(function(){
         $("#display-text").text(totalPrice);
         $("#form1").trigger("reset");
     });
-    $("#orderbtn").click(function(){
+    /*$("#orderbtn").click(function(){
         $(".hide-order").hide();
         $(".pizza-form").show();
         alert("Have a pizzaful day!");
@@ -230,5 +230,5 @@ $(document).ready(function(){
         tp2="";
         tp3="";
         tp4="";
-    });
+    });*/
 })
