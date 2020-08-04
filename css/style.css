@@ -22,3 +22,6 @@ label{
 .output{
     background-color: teal;
 }
+.hide-delivery{
+    display: none;
+}
