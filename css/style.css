@@ -7,8 +7,9 @@ html,body{
 }
 form{
     background-image: url(https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
-    background-size: cover;
-   
+    background-size: 1000px;
+    position: relative;
+    min-height: 380px;
     background-repeat: no-repeat;
     text-align: center;
     background-position: 50% 0;
@@ -20,7 +21,7 @@ form{
     
 }
 #logo{
-    padding-left: 100px;
+    padding-left: 50px;
 }
 p{
     font-family: "Poppins";

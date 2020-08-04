@@ -101,8 +101,10 @@ function toppingsCheckout(size,tp1,tp2,tp3,tp4,tp5,number){
         }if(tp5==="mushroom"){
             toppingsTotal+=110;
         }
+    }else{
+        break;
     }
-    else{alert("please select all boxes")}
+ 
 
     toppingsTotal=toppingsTotal*number
 }
@@ -111,6 +113,7 @@ function checkDelivery(delivery){
     if(delivery==="Yes"){
         deliveryCharge+=200;
         alert("You will be charged Ksh"+deliveryCharge);
+        location=prompt("Please enter the location of delivery:");
     }else{
         deliveryCharge=0;
     }
@@ -127,6 +130,7 @@ $(document).ready(function(){
     //Sets delivery to either yes / no
     $("#Yes").click(function(){
         alert("You will be charged Ksh200");
+        prompt("Please enter your location of delivery:")=location;
         delivery=this.value;
         $(".hide-delivery").show();
     });
@@ -190,7 +194,9 @@ $(document).ready(function(){
             tp5="";
         }
     });
-
+    $("#button").click(function(){
+        $(".orderConfirmation").css("background-color","white");
+    });
     $("form#form1").submit(function(event){
         event.preventDefault();
         var size=$("#size").val();
