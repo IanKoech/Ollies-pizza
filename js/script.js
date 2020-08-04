@@ -1,10 +1,12 @@
 var size;
 var crust;
-var totalPrice;
+var totalPrice=0;
 var toppings;
 var delivery;
 var location;
 var number=parseInt(document.getElementById("#number"));
+alert(number);
+alert(totalPrice);
 /*Js constructor for creating numerous instances*/
 var Pizza=function(size,crust,delivery,number){
     this.size=size;
@@ -46,6 +48,7 @@ function checkOut(){
 /*Front end logic */
 $(document).ready(function(){
    $("#Yes").click(function(){
+       if()
        delivery=document.getElementById("Yes").val();
    });
    $("#No").click(function(){
