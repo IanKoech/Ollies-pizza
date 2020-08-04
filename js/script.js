@@ -101,8 +101,6 @@ function toppingsCheckout(size,tp1,tp2,tp3,tp4,tp5,number){
         }if(tp5==="mushroom"){
             toppingsTotal+=110;
         }
-    }else{
-        break;
     }
  
 
@@ -221,7 +219,7 @@ $(document).ready(function(){
         $(".order").text(customer.makeOrder());
         $("#num").text(num);
         $("#display-text").text(totalPrice);
-        $("#form1").trigger("reset");
+       
     });
     /*$("#orderbtn").click(function(){
         $(".hide-order").hide();
