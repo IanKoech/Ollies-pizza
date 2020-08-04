@@ -8,10 +8,13 @@ form{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
+    
 }
 p{
     font-family: "Poppins";
     font-size: large;
+    text-align: center;
 }
 #jumbo{
     background-color: tomato;
@@ -28,5 +31,6 @@ label{
 #toppings{
     font-family: "Montserrat";
     font-weight: bolder;
+    text-align: center;
    
 }
